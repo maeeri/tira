@@ -1,17 +1,11 @@
 from random import shuffle
 
-def bubble(t):
-    while True:
-        change = False
-        for i in range(len(t)-1):
-            if t[i] > t[i+1]:
-                t[i], t[i+1] = t[i+1], t[i]
-                change = True
-        if not change:
-            break
-
 def count(t):
-    pass
+    if t == sorted(t): return 0
+    most = 1
+    for i in range(len(t)):
+        if i > t[i]: most = max(most, i-t[i]+1)
+    return most
 
 if __name__ == "__main__":
     print(count([1, 2, 3])) # 0

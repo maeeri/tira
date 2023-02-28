@@ -1,34 +1,30 @@
 def eval(s):
     a = s.split(' ')
     temp = []
-    operation = ''
-    open = 0
+    operations = []
+    indices = []
     res = 0
-    i = 0
     for i in range(len(a)):
-        if a[i][0] == '(':
-            operation = a[i][1]
-            for j in range(i+1, len(a)):
-                if a[j][0] == '(':
-                    open += a[j].count('(')
-                    temp.append(eval(' '.join(a[j:])))
-                elif a[j][-1] == ')':
-                    temp.append(int(a[j].replace(')', '')))
-                    open -= a[j].count(')')
-                    res += count(operation, temp)
-                    i = j
-                    break
-                else:
-                    temp.append(int(a[j]))
-        elif a[i][-1] == ')':
-            temp.append(int(a[j].replace(')', '')))
-            open -= a[j].count(')')
-            res += count(operation, temp)
-            temp.clear()
-        else:
-            # temp.append(int(a[i]))
-            pass
-    return res
+        if a[i] in ['(+', '(*', '(/', '(-']:
+            operations.append(a[i][1])
+            indices.append(i)
+            if i > 0:
+                temp.append(' '.join(a[indices[-2]:i]))
+        if a[i][-1] == ')' and len(indices) > 0:
+            end_b = a[i].count(')')-1
+            index = indices.pop()
+            op = operations.pop()
+            l = []
+            for y in range(index+1, i+1):
+                l.append(get_int(a[y]))
+            temp.append(str(count(op, l)) + ')' * end_b)
+            if len(a[i+1:]) > 0:
+                temp.append(' '.join(a[i+1:]))
+            return eval(' '.join(temp))
+    return get_int(s)
+
+def get_int(s):
+    return int(s[:-s.count(')')]) if s[-1] == ')' else int(s)
 
 
 def count(s, l):
@@ -49,7 +45,8 @@ def count(s, l):
             
 
 if __name__ == "__main__":
-    # print(eval("(+ 1 2 3 4 5)")) # 15
+    print(eval("(+ 1 2 3 4 5)")) # 15
     print(eval("(+ 5 (* 3 2) 7)")) # 18
-    # print(eval("(* (+ (+ 1 2) 3) (+ (* 4 5) 6 2))")) # 168
-    # print(eval("(+ 123 456)")) # 579
+    print(eval("(* (+ (+ 1 2) 3) (+ (* 4 5) 6 2))")) # 168
+    print(eval("(+ 123 456)")) # 579
+    print(eval("(+ 7 4 (* 5 8 0 (* 6 1)) (+ 1 9 (* 6 7)))")) # 63

@@ -1,5 +1,13 @@
 def solve(t):
-    pass
+    counter = 0
+    middle = len(t)//2
+    for i in range(middle+1):
+        if t[i] > middle:
+            counter += middle-i
+    for i in range(middle, len(t)):
+        if t[i] < middle+1:
+            counter += i-middle
+    return counter
 
 if __name__ == "__main__":
     print(solve([2, 1, 4, 3])) # 0

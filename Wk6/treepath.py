@@ -1,25 +1,12 @@
 from collections import namedtuple
 
-def count(node):
-    paths = all_paths(node)
-    result = 0
-    for path in paths:
-        if len(path) > 1:
-            counter = 0
-            for node in path:
-                print(node)
-                counter += 1
-            result += counter - 1
-    return result
 
-def all_paths(node):
-    if not node:
-        return []
-    if node.left is None and node.right is None:
-        return [[node]]
-    left_paths = all_paths(node.left)
-    right_paths = all_paths(node.right)
-    return [[node] + path for path in left_paths + right_paths]
+def count(node):
+    if not node.left and not node.right: return 0
+    left = count(node.left) if node.left is not None else 0
+    right = count(node.right) if node.right is not None else 0
+    return left + right
+
     
 if __name__ == "__main__":
     Node = namedtuple("Node",["left","right"])
