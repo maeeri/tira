@@ -1,13 +1,15 @@
-from collections import namedtuple
+def count_minimum_height_trees(n):
+    if n == 0 or n == 1:
+        return 1
+    if n == 2:
+        return 2
+    count = 0
+    for i in range(n//2):
+        count += count_minimum_height_trees(i) * count_minimum_height_trees(n-i-1)
+    if n % 2 == 0:
+        count += count_minimum_height_trees(n//2-1) * count_minimum_height_trees(n//2)
+    return count
 
-def count(node):
-    pass
 
 
-
-if __name__ == "__main__":
-    Node = namedtuple("Node",["left","right"])
-    tree = Node(Node(None,None),Node(Node(None,None),Node(None,None)))
-    print(count(tree)) # 8
-    print(count(Node(left=None, right=None))) # 0
-    print(count(Node(left=Node(left=None, right=None), right=Node(left=None, right=None)))) # 2
+print(count_minimum_height_trees(7))
