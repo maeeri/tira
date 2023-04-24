@@ -1,8 +1,7 @@
 def count(n, m, k):
     if n*m == 1 or k == 1:
         return 1
-    else:
-        count(n, m, k-1)
+    
         
 
 if __name__ == "__main__":

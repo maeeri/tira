@@ -1,9 +1,8 @@
-from heapq import heapify, heappop, heappush
+from heapq import heappop, heappush
 
 class Tasks:
     def __init__(self) -> None:
         self.list = []
-        heapify(self.list)
         
     def add(self, name, priority):
         heappush(self.list, (-priority, name))

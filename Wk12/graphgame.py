@@ -4,11 +4,13 @@ class GraphGame:
         self.n = n
         self.graph = [[] for _ in range(self.n+1)]
         self.paths = {i: [] for i in range(1, self.n +1)}
+        self.win = {i: None for i in range(1, self.n+1)}
         self.change = False
 
     def add_link(self,a,b):
-        self.graph[a].append(b)
-        self.change = True
+        if b not in self.graph[a]:
+            self.graph[a].append(b)
+            self.change = True
 
     def dfs(self, x, l, visited):
         if visited[x]:
@@ -19,23 +21,39 @@ class GraphGame:
         l.append(x)
 
     def get_paths(self):
-        for x in range(1, self.n+1):
-            l = []
-            visited = [False]*(len(self.graph)+1)
-            self.dfs(x, l, visited)
-            l.reverse()
-            print(l)
-            if len(l) > 1 and tuple(l[1:]) not in self.paths[l[0]]: self.paths[l[0]].append(tuple(l[1:]))
+        for x in range(1, len(self.graph)):
+            for y in self.graph[x]:
+                l = []
+                visited = [False]*(len(self.graph)+1)
+                self.dfs(y, l, visited)
+                l.reverse()
+                if len(l) > 0 and tuple(l) not in self.paths[x]: self.paths[x].append(tuple(l))
         self.change = False
 
     def winning(self,x):
         if self.change:
-            self.get_paths()
-        if len(self.paths[x]) == 0: return False
-        print(self.paths[x])
-        for path in self.paths[x]:
-            print(x, path)
+            self.win = {i: None for i in range(1, self.n+1)}
+        self.get_paths()
+        self.play_game(x)
+        self.change = False
+        return self.win[x]
 
+    def play_game(self, x):
+        if self.win[x] is not None:
+            return self.win[x]
+        if len(self.paths[x]) == 0:
+            self.win[x] = False
+            return False
+        if len(self.paths[x]) == 1:
+            self.win[x] = not self.play_game(self.paths[x][0][0])
+            return self.win[x]
+        for y in self.paths[x]:
+            b = self.play_game(y[0])
+            if not b:
+                self.win[x] = True
+                break
+        self.win[x] = self.win[x] == True
+        return self.win[x]
 
 if __name__ == "__main__":
     g = GraphGame(6)
@@ -49,4 +67,4 @@ if __name__ == "__main__":
     g.add_link(6,5)
     print(g.winning(3)) # True
     print(g.winning(1)) # False
-    print(g.winning(2)) # False
+    print(g.winning(2)) # False    

@@ -6,8 +6,6 @@ def count(a, b):
     counter = 0
     for x in a:
         heappush(heap, (x[1], x))
-    
-    print(heap)
  
     for i in range(len(heap)):
         for j in len(b):

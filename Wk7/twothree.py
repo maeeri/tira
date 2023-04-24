@@ -1,8 +1,7 @@
-from heapq import heapify, heappop, heappush
+from heapq import heappop, heappush
 
 def smallest(n):
     t = [1]
-    heapify(t)
     for i in range(n):
         x = heappop(t)
         heappush(t, 2*x)
