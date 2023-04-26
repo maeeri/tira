@@ -1,113 +1,63 @@
-from collections import deque
+from collections import deque, defaultdict
 
 class Network:
     def __init__(self, n, m):
         self.n = n
         self.m = m
-        self.box_graph = {(n,m): [] for n in range(self.n+1) for m in range(self.m+1)}
-        self.player_graph = {(n,m): [] for n in range(self.n+1) for m in range(self.m+1)}
+        self.graph = {(n,m): [] for n in range(self.n) for m in range(self.m)}
         self.box = (0,0)
         self.player = (0,0)
         self.box_target = (0,0)
-        self.player_target = (0,0)
         self.walls = []
 
-    def add_link(self, a, b, x=''):
-        if x == 'box':
-            self.box_graph[a].append(b)
-        else:
-            self.player_graph[a].append(b)
-            self.player_graph[b].append(a)
+    def add_link(self, a, b):
+        self.graph[a].append(b)
+        self.graph[b].append(a)
 
-    def is_not_wall(self, x):
-        return x not in self.walls
+    def is_wall(self, x):
+        return x in self.walls
 
-    def route_length(self, a, b, visited):
-        self.bfs(a, visited)
-        return len(self.paths[b])+1
-
-    def best_route(self, a, b, box=False):
-        self.q = deque()
-        self.visited = {(n,m): False for n in range(self.n+1) for m in range(self.m+1)}
-        self.paths = {(n,m): -1 for n in range(self.n+1) for m in range(self.m+1)}
-        self.bfs(a)
-        return self.paths[b]
-    
-    def __str__(self) -> str:
-        return f"box: {self.box}\nplayer: {self.player}\nbox target: {self.box_target}\nplayer target: {self.player_target}"
-
-    def get_route(self):
-        self.q = deque()
-        self.q.append((self.box, self.player))
-        self.visited = {(n,m,o,p): False for n in range(self.n+1) for m in range(self.m+1) for o in range(self.n+1) for p in range(self.n+1)}
-        self.visited[self.box+self.player] = True
-        self.paths = {(n,m): -1 for n in range(self.n+1) for m in range(self.m+1)}
-        steps = self.bfs()
-        print(steps)
-
-    def bfs(self):
-        start = (self.player, self.box)
+    def get_route(self, visited):
+        start = (self.player, self.box, 0)
         q=deque()
-        visited = set()
         q.append(start)
         visited.add(start)
-        steps = {(i,j):0 for i in range(self.n+1) for j in range(self.m+1)}
-        temp = 0
+        steps = defaultdict()
+
         while q:
             for _ in range(len(q)):
-                player_pos, box_pos = q.popleft()
-                for move in [(0,1), (1,0), (0,-1), (-1,0)]:
-                    new_player_pos = (player_pos[0]+move[0], player_pos[1]+move[1])
-                    new_box_pos = (box_pos[0] + move[0], box_pos[1] + move[1])
-                    if new_box_pos == self.box_target:
-                        steps[new_box_pos] = min(temp, steps[box_pos])
+                player_pos, box_pos, depth = q.popleft()
+                for new_player_pos in self.graph[player_pos]:
+                    box_is_moving = new_player_pos == box_pos
+                    new_box_pos = (box_pos[0]+(new_player_pos[0]-player_pos[0]), box_pos[1]+(new_player_pos[1]-player_pos[1])) if box_is_moving else box_pos
+                    illegal_move = self.is_wall(new_box_pos) or self.is_wall(new_player_pos)
+                    if illegal_move or (new_player_pos, new_box_pos) in visited:
                         continue
-                    if new_player_pos != new_box_pos and (box_pos, new_player_pos) not in visited and self.is_not_wall(new_player_pos):
-                        q.append((box_pos, new_player_pos))
-                        visited.add((box_pos, new_player_pos))
-                        steps[box_pos] += 1
-                    elif new_player_pos == box_pos and (box_pos, new_box_pos) not in visited and self.is_not_wall(new_box_pos):
-                        q.append((box_pos, new_box_pos))
-                        visited.add((box_pos, new_box_pos))
-                        steps[new_box_pos] = min(temp, steps[box_pos]) + 1
-                    elif new_box_pos == box_pos and (new_player_pos, new_box_pos) not in visited and self.is_not_wall(new_player_pos):
-                        q.append((new_player_pos, new_box_pos))
-                        visited.add((new_player_pos, new_box_pos))
-                        steps[new_box_pos] = min(temp, steps[box_pos]) + 1
-                if box_pos == self.box_target:
-                    print(steps)
-                    return steps[self.box_target]
-                temp += 1
-        return -1
-        
+                    elif new_box_pos == self.box_target:
+                        steps[new_box_pos] = min(depth, steps[new_box_pos]) if new_box_pos in steps else depth+1
+                        continue
+                    q.append((new_player_pos, new_box_pos, depth+1))
+                    visited.add((new_player_pos, new_box_pos))
+                    steps[new_box_pos] = depth
+
+        return -1 if steps[self.box_target] == 0 else steps[self.box_target]    
 
 def count(r):
     network = Network(len(r), len(r[0]))
-    floor = ['Y', '.', 'B', 'X']
-    wallcounter = 0
     for i in range(len(r)):
         for j in range(len(r[i])):
             if r[i][j] == '#':
                 network.walls.append((i,j))
-                wallcounter +=1
-            else:
-                if r[i][j-1] in floor:
-                    network.add_link((i,j), (i, j-1))
-                    if r[i][j+1] in floor:
-                        network.add_link((i,j), (i,j-1), 'box')
-                        network.add_link((i,j), (i,j+1), 'box')
-                if r[i-1][j] in floor:
-                    network.add_link((i,j), (i-1, j))
-                    if r[i+1][j] in floor:
-                        network.add_link((i,j), (i-1,j), 'box')
-                        network.add_link((i,j), (i+1,j), 'box')
             if r[i][j] == 'X':
                 network.player = (i,j)
             if r[i][j] == 'B':
                 network.box = (i,j)
             if r[i][j] == 'Y':
                 network.box_target = (i,j)
-    return network.get_route()
+            if i < len(r)-1: network.add_link((i,j),(i+1,j)) 
+            if j < len(r[0])-1: network.add_link((i,j),(i,j+1))
+    visited = set()
+    return network.get_route(visited)
 
 if __name__ == "__main__":
     r = ["########",

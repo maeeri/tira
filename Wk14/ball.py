@@ -36,7 +36,7 @@ class Graph:
         if x == y:
             return f
         for v in self.adj[x]:
-            if self.graph_copy[x][v] > 0 and self.level[v] == self.level[x] +1:
+            if self.graph_copy[x][v] > 0 and self.level[v] == self.level[x] + 1:
                 d = self.dfs(v, y, min(f, self.graph_copy[x][v]))
                 if d > 0:
                     self.graph_copy[x][v] -= d

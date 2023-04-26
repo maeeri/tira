@@ -4,7 +4,6 @@ class Network:
     def __init__(self, n):
         self.n = n
         self.graph = [[] for _ in range(self.n+1)]
-        pass
 
     def add_link(self, a, b):
         self.graph[a].append(b)
