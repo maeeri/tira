@@ -39,3 +39,15 @@ if __name__ == "__main__":
     print(w.best_route(1,5)) # -1
     w.add_link(3,5)
     print(w.best_route(1,5)) # 2
+
+# Verkossa on n tietokonetta, joiden välillä ei ole vielä yhteyksiä. Tehtäväsi on toteuttaa luokka, 
+# jonka avulla pystyy lisäämään yhteyden kahden koneen välille sekä etsimään suorimman reitin kahden 
+# koneen välillä.
+
+# Voit olettaa, että tietokoneita on enintään 50 ja luokan metodeita kutsutaan enintään 100 kertaa.
+
+# Toteuta tiedostoon network.py luokka Network, jossa on seuraavat metodit:
+# - konstruktori, jolle annetaan tietokoneiden määrä
+# - add_link lisää yhteyden kahden koneen välille
+# - best_route palauttaa pienimmän yhteyksien määrän reitillä kahden koneen välillä 
+#   (tai −1 jos reittiä ei ole)

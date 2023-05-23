@@ -46,3 +46,23 @@ if __name__ == "__main__":
     rec2 = (0,2,3,0)
     rec3 = (-3,0,1,-1)
     print(area(rec1,rec2,rec3)) # 12
+
+
+#     Tasossa on kolme suorakulmiota, joiden sivut ovat vaaka- ja pystyakselien suuntaisia. Tehtäväsi on laskea sen alueen pinta-ala, jota peittää vähintään yksi annetuista suorakulmioista.
+
+# Esimerkiksi seuraavassa kuvassa suorakulmioiden peittämän alueen pinta-ala on 16. Kuva vastaa koodipohjissa olevaa esimerkkiä.
+
+# Voit olettaa, että kaikki koordinaatit ovat kokonaislukuja välillä −109…109
+# .
+
+# Huomaa, että on liian hidasta käydä läpi kaikki pisteet suorakulmioiden alueelta, vaan sinun tulee keksiä tehokkaampi matemaattinen ratkaisu.
+
+# Toteuta funktio area(rec1, rec2, rec3), joka antaa kysytyn pinta-alan. Funktiolle annetaan kolme tuplea, joista jokainen määrittelee yhden suorakulmion. Jokaisessa tuplessa on neljä kokonaislukua x1
+# , y1
+# , x2
+#  ja y2
+# : suorakulmion vasen ylänurkka on (x1,y1)
+#  ja oikea alanurkka on (x2,y2)
+# .
+
+# Toteuta funktio tiedostoon rectangles.py.

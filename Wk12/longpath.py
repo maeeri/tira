@@ -165,4 +165,15 @@ if __name__ == "__main__":
     l.add_edge(46,48)
     l.add_edge(47,49)
     l.add_edge(48,50)
-    print(l.calculate())
+    print(l.calculate()) # 49
+
+# Tehtäväsi on toteuttaa luokka, jonka avulla pystyy lisäämään kaaren suuntaamattomaan verkkoon sekä 
+# selvittämään, kuinka pitkä on pisin sellainen polku, jossa jokaisen solmun tunnus on suurempi kuin 
+# edellisen solmun tunnus.
+
+# Voit olettaa, että solmuja on enintään 50 ja luokan metodeita kutsutaan enintään 100 kertaa.
+
+# Toteuta tiedostoon longpath.py luokka LongPath, jossa on seuraavat metodit:
+# - konstruktori, jolle annetaan solmujen määrä
+# - add_edge lisää kaaren kahden solmun välille
+# - calculate antaa pisimmän polun pituuden

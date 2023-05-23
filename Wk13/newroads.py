@@ -49,3 +49,18 @@ if __name__ == "__main__":
     print(n.min_cost()) # 11
     n.add_road(2,3,1)
     print(n.min_cost()) # 7
+
+# Bittimaassa on n kaupunkia, joiden välillä ei ole alussa teitä. Tavoitteena on yhdistää kaikki 
+# kaupungit toisiinsa teiden avulla.
+
+# Annettuna on joukko mahdollisia teitä ja jokaisesta tiestä rakentamisen hinta. Mikä on pienin kustannus, 
+# jolla voidaan rakentaa tieverkosto niin, että jokaisen kahden kaupungin välillä on reitti?
+
+# Voit olettaa, että kaupunkeja on enintään 50 ja luokan metodeita kutsutaan enintään 100 kertaa. 
+# Jokaisen tien pituus on kokonaisluku välillä 1…1000.
+
+# Toteuta tiedostoon newroads.py luokka NewRoads, jossa on seuraavat metodit:
+# - konstruktori, jolle annetaan kaupunkien määrä
+# - add_road tarjoaa kaupunkien a ja b välille tietä, jonka hinta on x
+# - min_cost ilmoittaa pienimmän rakentamisen kokonaiskustannuksen 
+#   (tai −1, jos ei ole mahdollista yhdistää kaikkia kaupunkeja)

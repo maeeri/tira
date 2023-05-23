@@ -15,3 +15,18 @@ if __name__ == "__main__":
     print(count("aaaaa")) # 15
     print(count("abbbcaa")) # 11
     print(count("abcde")) # 5
+
+
+# Tehtäväsi on laskea, monessako merkkijonon osajonossa jokainen merkki on sama. Esimerkiksi merkkijonossa abbbcaa tällaiset osajonot ovat
+# - a (kolmesti)
+# - aa
+# - b (kolmesti)
+# - bb (kahdesti)
+# - bbb
+# - c
+# eli yhteensä 11 osajonoa.
+
+# Voit olettaa, että merkkijono muodostuu merkeistä a–z ja siinä on enintään 10**5
+# merkkiä. Tavoitteena on, että algoritmin aikavaativuus on O(n).
+
+# Toteuta tiedostoon onechar.py funktio count, joka palauttaa halutun tuloksen.

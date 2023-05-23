@@ -54,3 +54,24 @@ if __name__ == "__main__":
     print(balance("(((()**(**")) # [1,1,1,1]
     print(balance("(((**()")) # [1,2]
     print(balance("(()(***"))
+
+
+# Merkkijonon jokainen merkki on (, ) tai tähti *. Tehtäväsi on korvata jokainen merkki * yhdellä 
+# tai useammalla lopettavalla sulkumerkillä ) siten, että syntyvä sulkulauseke on kelvollinen, 
+# tai ilmoittaa, että tämä ei ole mahdollista.
+
+# Kelvolliset sulkulausekkeet ovat sellaisia, joissa jokaista alkavaa sulkumerkkiä vastaa tasan 
+# yksi lopettava sulkumerkki. Esimerkiksi ()(()()) ja (()(())) ovat kelvollisia sulkulausekkeita, 
+# mutta )( ja ()) eivät ole.
+
+# Ohjelmasi tulee palauttaa lista, jonka pituus vastaa syötteessä olevan merkkijonon tähtien lukumäärää. 
+# Jokainen luku listalla ilmoittaa järjestyksessä, kuinka monella lopettavalla sulkumerkillä vastaava 
+# tähti tulee korvata. Voit antaa minkä tahansa kelvollisen ratkaisun. Mikäli sulkulausekkeesta ei voi 
+# saada kelvollista, ohjelman tulee palauttaa None.
+
+# Voit olettaa, että merkkijonossa on enintään 105
+# merkkiä. Tavoitteena on, että algoritmin aikavaativuus on O(n).
+
+# Toteuta tiedostoon brackets.py funktio balance, joka palauttaa listan, joka ilmoittaa kustakin 
+# tähdestä sitä vastaavien )-merkkien lukumäärän, tai None, jos sulkulausekkeesta ei voi saada 
+# kelvollista.

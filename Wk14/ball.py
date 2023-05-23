@@ -78,3 +78,17 @@ if __name__ == "__main__":
     b.add_pair(1,3)
     b.add_pair(3,2)
     print(b.calculate()) # 2
+
+# Tanssiaisiin osallistuu n opiskelijaa Kumpulasta ja n opiskelijaa Viikistä. Molempien kampusten 
+# opiskelijat on numeroitu 1,2,…,n.
+
+# Jokaisessa tanssiparissa toinen opiskelija on Kumpulasta ja toinen Viikistä, ja tiedät kaikki parit, 
+# jotka suostuvat tanssimaan keskenään. Jokainen opiskelija voi kuulua enintään yhteen tanssipariin. 
+# Mikä on suurin määrä pareja, jotka on mahdollista muodostaa?
+
+# Voit olettaa, että n on enintään 50 ja luokan metodeita kutsutaan enintään 100 kertaa.
+
+# Toteuta tiedostoon ball.py luokka Ball, jossa on seuraavat metodit:
+# - konstruktori, jolle annetaan määrä n
+# - add_pair määrittää, että Kumpulan opiskelija a ja Viikin opiskelija b suostuvat tanssimaan keskenään
+# - calculate ilmoittaa suurimman mahdollisen tanssiparien määrän

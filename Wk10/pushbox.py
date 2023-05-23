@@ -101,3 +101,13 @@ if __name__ == "__main__":
         "#.#........Y.......#",
         "####################"]
     print(count(r))
+
+# Olet n×m -labyrintissa ruudussa X, ja tehtäväsi on työntää ruudussa B oleva laatikko ruutuun Y. 
+# Jokainen ruutu on joko lattiaa (.) tai seinää (#), ja jokainen reunalla oleva ruutu on seinää.
+
+# Voit työntää laatikkoa kulkemalla sitä päin, jolloin siirryt laatikon ruutuun ja laatikko siirtyy 
+# askeleen kulkusuuntaan. Mikä on pienin mahdollinen määrä askelia työntää laatikko maaliruutuun?
+
+# Voit olettaa, että 1≤n,m≤20. Jos ratkaisua ei ole olemassa, palauta −1.
+
+# Toteuta tiedostoon pushbox.py funktio count, joka antaa pienimmän askelten määrän.

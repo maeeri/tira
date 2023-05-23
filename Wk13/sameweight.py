@@ -72,3 +72,14 @@ if __name__ == "__main__":
     s.add_edge(2,4,1)
     print(s.check())
     print(s.check())
+
+# Tehtäväsi on tutkia, onko annetun verkon jokaisella virittävällä puulla sama paino.
+
+# Voit olettaa, että solmuja on enintään 50 ja luokan metodeita kutsutaan enintään 100 kertaa. 
+# Jokaisen kaaren paino on kokonaisluku välillä 1…1000.
+
+# Toteuta tiedostoon sameweight.py luokka SameWeight, jossa on seuraavat metodit:
+# - konstruktori, jolle annetaan solmujen määrä
+# - add_edge lisää solmujen a ja b välille kaaren, jonka paino on x
+# - check ilmoittaa, onko verkon kaikilla virittävillä puilla sama paino 
+#   (jos verkko ei ole yhtenäinen, haluttu vastaus on True)

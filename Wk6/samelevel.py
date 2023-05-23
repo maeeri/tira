@@ -23,3 +23,20 @@ if __name__ == "__main__":
     print(count(tree,2)) # 1
     print(count(tree,3)) # 2
     print(count(tree,4)) # 0
+
+# Tehtäväsi on laskea, montako solmua on annetussa binääripuussa tietyllä tasolla. 
+# Puun juuri on tasolla 1, sen lapset ovat tasolla 2, jne. 
+# Voit olettaa, että puussa on enintään 100 solmua.
+
+# Tehtäväpohjassa on esimerkkinä seuraava puu:
+
+# o
+#  \
+#   o
+#  / \
+# o   o
+
+# Tässä tasolla 1 on yksi solmu, tasolla 2 on yksi solmu, tasolla 3
+# on kaksi solmua ja muilla tasoilla ei ole mitään.
+
+# Toteuta tiedostoon samelevel.py funktio count, joka palauttaa solmujen määrän.

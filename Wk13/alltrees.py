@@ -1,3 +1,4 @@
+# ei toimi vielä
 class Knot:
     def __init__(self, val) -> None:
         self.val = val
@@ -71,3 +72,17 @@ if __name__ == "__main__":
     print(a.count())
     a.add_edge(2,3)
     print(a.count())
+
+# Ruudukossa on n×n ruutua, joista jokainen on aluksi seinää. Rivit ja sarakkeet on numeroitu 1…n. 
+# Ruudukosta aletaan poistaa seinää muuttamalla seinäruutuja lattiaruuduiksi.
+
+# Tehtäväsi on pitää kirjaa huoneiden määrästä tässä prosessissa. Huoneissa lattiaruutuja voi kulkea 
+# vaaka- ja pystysuuntaisesti, kuten aiemmissa kurssin tehtävissä.
+
+# Voit olettaa, että n on enintään 100 ja luokan metodeita kutsutaan enintään 10000 kertaa. 
+# Lisäksi reunaruutuja ei koskaan muuteta lattiaksi.
+
+# Toteuta tiedostoon wallgrid.py luokka WallGrid, jossa on seuraavat metodit:
+# - konstruktori, jolle annetaan ruudukon koko
+# - remove muuttaa ruudun (x,y) lattiaksi, mikäli se ei jo ole lattiaa
+# - count ilmoittaa, montako huonetta ruudukossa on

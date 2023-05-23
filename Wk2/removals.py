@@ -1,3 +1,5 @@
+# ei toimi vielä
+
 def find(s, k):
     a = []
     b = []
@@ -32,3 +34,12 @@ if __name__ == "__main__":
     print(find("aaaabbbcccc", 1)) # 6
     print(find("aabbaacc", 2)) # 6
     print(find("aaaabbbbaaaccccaaccacbbaa", 3)) # 13
+
+# Sinulle annetaan merkkijono, joka koostuu vain merkeistä a, b tai c. Voit kerätä merkkejä merkkijonosta poistamalla niitä joko merkkijonon alusta tai lopusta. Kuinka monta merkkiä on vähintään poistettava, jotta jokaista merkkiä a–c saadaan kerättyä vähintään k
+#  kappaletta?
+
+# Voit olettaa, että merkkijono muodostuu merkeistä a–c, siinä on enintään 105
+#  merkkiä ja kutakin merkkiä on vähintään k
+#  kappaletta. Tavoitteena on, että algoritmin aikavaativuus on O(n).
+
+# Toteuta tiedostoon removals.py funktio find, joka kertoo, montako merkkiä on vähintään poistettava.

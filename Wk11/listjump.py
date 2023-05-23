@@ -29,3 +29,16 @@ if __name__ == "__main__":
     print(calculate([3,2,1])) # -1
     print(calculate([3,5,2,2,2,3,5])) # 10
     print(calculate([7,5,3,1,4,2,4,6,1])) # 32
+
+# Annettuna on lista, jossa on n alkiota. Jokainen alkio on kokonaisluku väliltä 1…n.
+
+# Lähdet liikkelle listan alusta, ja aina kun olet alkion x kohdalla, saat hypätä x
+# askelta vasemmalle tai oikealle. Et saa kuitenkaan tehdä hyppyä, joka veisi listan ulkopuolelle. 
+# Tavoitteesi on päästä listan loppuun niin, että hyppyjen kokonaismatka on mahdollisimman pieni.
+
+# Esimerkiksi listassa [3,5,2,2,2,3,5] paras ratkaisu on hypätä ensin 3 askelta oikealle, 
+# sitten 2 askelta vasemmalle ja lopuksi 5 askelta oikealle. Tässä askelia on yhteensä 3+2+5=10.
+
+# Voit olettaa, että n on enintään 10**5. Jos mitään ratkaisua ei ole olemassa, palauta −1.
+
+# Toteuta tiedostoon listjump.py funktio calculate, joka antaa pienimmän kokonaismatkan.

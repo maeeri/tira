@@ -1,3 +1,5 @@
+# ei toimi vielä
+
 from collections import namedtuple
 
 class MyNode:
@@ -46,3 +48,19 @@ if __name__ == "__main__":
     print(count(tree)) # 8
     # print(count(Node(left=None, right=None))) # 0
     # print(count(Node(left=Node(left=None, right=None), right=Node(left=None, right=None)))) # 2
+
+# Polku on kahden puun solmun välinen reitti, ja polun pituus on askelten määrä reitillä. 
+# Tehtäväsi on laskea pituuksien summa 
+# kaikista puussa olevista poluista, joissa päätesolmut ovat puun lehtiä.
+
+#     o
+#    / \
+#   o   o
+#      / \
+#     o   o
+
+# Polkujen pituudet ovat 3, 3 ja 2, joten vastaus on 3+3+2=8.
+
+# Voit olettaa, että n on enintään 100.
+
+# Toteuta tiedostoon treepath.py funktio count, joka palauttaa pituuksien summan.

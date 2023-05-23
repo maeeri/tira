@@ -52,3 +52,14 @@ if __name__ == "__main__":
     c.add_edge(3,5)
     print(c.check())
     print(c.check())
+
+# Verkossa on n solmua ja se on aluksi tyhjä. Tehtäväsi on toteuttaa luokka, jonka avulla pystyy 
+# lisäämään kaaren verkkoon sekä tutkimaan, voiko solmut värittää kahdella värillä niin, että jokainen 
+# kaari yhdistää kaksi eriväristä solmua.
+
+# Voit olettaa, että solmuja on enintään 50 ja luokan metodeita kutsutaan enintään 100 kertaa.
+
+# Toteuta tiedostoon coloring.py luokka Coloring, jossa on seuraavat metodit:
+# - konstruktori, jolle annetaan solmujen määrä
+# - add_edge lisää kaaren kahden solmun välille
+# - check tarkastaa, voiko verkon värittää kahdella värillä

@@ -42,3 +42,16 @@ if __name__ == "__main__":
     print(c.count()) # 3
     c.add_road(4,5)
     print(c.count()) # 2
+
+# Bittimaassa on n kaupunkia, joiden välillä ei ole aluksi teitä. Kaksi kaupunkia kuuluvat samaan 
+# komponenttiin, jos niiden välillä pystyy kulkemaan teiden avulla.
+
+# Tehtäväsi on toteuttaa luokka, jonka avulla pystyy lisäämään tien kahden kaupungin välille sekä 
+# laskemaan, montako komponenttia kaupungit muodostavat.
+
+# Voit olettaa, että kaupunkeja on enintään 50 ja luokan metodeita kutsutaan enintään 100 kertaa.
+
+# Toteuta tiedostoon components.py luokka Components, jossa on seuraavat metodit:
+# - konstruktori, jolle annetaan kaupunkien määrä
+# - add_road lisää tien kahden kaupungin välille
+# - count ilmoittaa komponenttien määrän

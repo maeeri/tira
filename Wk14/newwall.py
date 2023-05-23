@@ -1,3 +1,4 @@
+# ei toimi vielä
 from collections import defaultdict
 class Graph:
     def __init__(self,n):
@@ -91,3 +92,14 @@ if __name__ == "__main__":
          ".....",
          "..#.."]
     print(count(r))#1
+
+# Annettuna on n×n -ruudukko, jossa jokainen ruutu on lattiaa tai seinää. Vasemman yläkulman ja oikean 
+# alakulman ruudut ovat aina lattiaa eikä niitä voi muuttaa.
+
+# Ruudukossa voi liikkua vain oikealle ja alaspäin. Montako ruutua pitää muuttaa vähintään seinäksi, 
+# jotta ruudukossa ei ole mitään reittiä vasemmasta yläkulmasta oikeaan alakulmaan?
+
+# Ruudukon kuvauksessa merkki . tarkoittaa lattiaa ja merkki # tarkoittaa seinää. Voit olettaa, 
+# että 1≤n≤20.
+
+# Toteuta tiedostoon newwall.py funktio count, joka antaa pienimmän muutettavien ruutujen määrän.

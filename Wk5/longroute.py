@@ -36,3 +36,13 @@ if __name__ == "__main__":
     print(count("L", 10**9)) # 1000000001
     print(count("DLUR", 10**9)) # 4
     print(count("UURRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRDDLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL", 1000000000)) # 3000000144
+
+
+# Robotti liikkuu kuten viikon aiemmassa tehtävässä, mutta toistaa samaa liikesarjaa k
+#  kertaa peräkkäin. Monessako eri ruudussa robotti käy yhteensä?
+
+# Voit olettaa, että liikesarjassa on enintään 100 komentoa ja k
+#  on välillä 1…10**9.
+
+# Toteuta tiedostoon longroute.py funktio count, joka ilmoittaa eri ruutujen määrän, 
+# kun sille annetaan robotin liikesarja ja toistojen määrä.

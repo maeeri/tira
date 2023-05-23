@@ -15,3 +15,10 @@ if __name__ == "__main__":
     print(count("abcdef", "g")) # 21
     print(count("xxxxxxxxx", "x")) # 0
     print(count("pupujussikainen", "u")) # 48
+
+# Tehtäväsi on laskea, moniko merkkijonon osajono ei sisällä kiellettyä merkkiä. Syötteenä sinulle annetaan merkkijono ja merkki, jota osajonot eivät saa sisältää.
+
+# Voit olettaa, että merkkijono muodostuu merkeistä a–z, siinä on enintään 10**5
+#  merkkiä ja kielletty merkki on jokin merkeistä a–z. Tavoitteena on, että algoritmin aikavaativuus on O(n).
+
+# Toteuta tiedostoon forbidden.py funktio count, joka palauttaa halutun tuloksen.

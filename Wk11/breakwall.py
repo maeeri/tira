@@ -45,3 +45,15 @@ if __name__ == "__main__":
          "#..*.B.#",
          "########"]
     print(count(r)) # 2
+
+# Annettuna on n×m -labyrintti, ja tehtäväsi on kulkea ruudusta A ruutuun B.
+
+# Tässä tehtävässä labyrintissa on kahdenlaisia seinäruutuja: labyrintin reunalla olevaa seinää 
+# merkitään # kuten ennenkin, mutta labyrintin sisällä olevaa seinää merkitään *. 
+# Voit rikkoa labyrintin sisällä olevaa seinää, jolloin pystyt kulkemaan vapaammin labyrintissa.
+
+# Mikä on pienin mahdollinen määrä seinäruutuja, jotka sinun täytyy rikkoa, jotta pääset maaliin? 
+# Voit olettaa, että 1≤n,m≤20.
+
+# Toteuta tiedostoon breakwall.py funktio count, joka kertoo pienimmän 
+# mahdollisen määrän rikottavia seinäruutuja.

@@ -42,3 +42,13 @@ if __name__ == "__main__":
          "#..#.#.#",
          "########"]
     print(count(r)) # 3
+
+# Annettuna on n×m -ruudukko, joka esittää talon pohjapiirrosta. Jokainen ruutu on joko lattiaa (.) 
+# tai seinää (#), ja jokainen reunalla oleva ruutu on seinää.
+
+# Kaksi lattiaruutua kuuluvat samaan huoneeseen, jos ne ovat vierekkäin pysty- tai vaakasuunnassa. 
+# Montako huonetta talossa on?
+
+# Voit olettaa, että 1≤n,m≤20.
+
+# Toteuta tiedostoon chambers.py funktio count, joka antaa huoneiden määrän.

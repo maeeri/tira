@@ -92,3 +92,15 @@ if __name__ == "__main__":
          '.....*.*',
          '**.**...']
     print(count(r)) # 5
+
+# Annettuna on shakkilauta, jossa on 8×8 ruutua. Joissakin ruuduissa on ratsu.
+
+# Tehtäväsi on muodostaa ratsuista mahdollisimman monta paria, jotka uhkaavat toisiaan. Jokainen ratsu 
+# voi kuulua enintään yhteen pariin.
+
+# Ratsut uhkaavat toisiaan, jos niiden vaaka- ja pystyetäisyyksistä toinen on 1 ja toinen on 2 
+# (shakin sääntöjen mukaisesti).
+
+# Laudan kuvauksessa merkki . tarkoittaa tyhjää ruutua ja merkki * tarkoittaa ratsua.
+
+# Toteuta tiedostoon knightpairs.py funktio count, joka antaa suurimman parien määrän.

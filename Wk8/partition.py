@@ -36,3 +36,13 @@ if __name__ == "__main__":
     print(check([1,2,3,4,5,6,7])) # True
     print(check([4,4,4,6,6])) # True
     print(check([22179872, 328807557, 162894491, 212723287, 73679524, 16763251, 20424809, 72619960, 132613455, 254391424, 6116420, 67192881, 252086084, 313755177, 121924316]))
+
+# Annettuna on lista kokonaislukuja ja tehtäväsi on selvittää, onko luvut mahdollista jakaa kahteen ryhmään niin, 
+# että molempien ryhmien summa on sama.
+
+# Esimerkiksi kun lista on [9,4,8,7,6], mahdollinen ratkaisu on muodostaa ryhmät [8,9] ja [4,6,7]. 
+# Tällöin kummankin ryhmän lukujen summa on 17.
+
+# Voit olettaa, että jokainen luku on välillä 1…10**9 ja että listalla on enintään 16 lukua.
+
+# Toteuta tiedostoon partition.py funktio check, joka ilmoittaa, onko luvut mahdollista jakaa tasan.

@@ -47,3 +47,17 @@ if __name__ == "__main__":
     print(find([41222388, 392676742, 307110407, 775934683, 25076911], 809136843)) # 191628970
     print(find([14, 15, 6, 2, 7, 14], 15)) #3
   
+# Annettuna on lista kokonaislukuja, jotka kaikki ovat väliltä 1…k. 
+# Listalle halutaan lisätä uusi kokonaisluku väliltä 1…k, 
+# jonka etäisyys lähimpään listalla jo valmiiksi olevaan lukuun on mahdollisimman suuri. Kuinka suuri tuo etäisyys voi korkeintaan olla?
+
+# Voit olettaa, että listalla on korkeintaan 105 lukua ja k on korkeintaan 10**9. 
+# Tavoitteena on, että algoritmin aikavaativuus on O(n) tai O(nlogn).
+
+# Toteuta tiedostoon distance.py funktio find, joka ilmoittaa suurimman mahdollisen etäisyyden.
+
+
+# Selitys: Jokainen kokonaisluku väliltä 1…11 on korkeintaan 3:n päässä jostain listan [1,2,9]
+# luvusta. Yksi tällainen luku on esimerkiksi 5, joka on kolmen päässä sitä lähimmästä luvusta 2. 
+# Luku 6 puolestaan on kolmen päässä luvusta 9. Jokainen luku väliltä 1…3
+# löytyy jo valmiiksi listalta [2,1,3]. Siksi suurin etäisyys on 0.

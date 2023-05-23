@@ -16,3 +16,14 @@ class Mode:
 
 if __name__ == "__main__":
     pass
+
+
+# Sinulle annetaan lukuja yksi kerrallaan. Tehtäväsi on kertoa jokaisen luvun kohdalla, 
+# mikä on siihen mennessä annettujen lukujen moodi (eli yleisin luku). Jos moodeja on useita, 
+# niistä valitaan pienin mahdollinen.
+
+# Voit olettaa, että jokainen luku on kokonaisluku välillä 1…10**9
+#  ja lukuja annetaan enintään 10**5.
+
+# Toteuta tiedostoon mode.py luokka Mode, jonka funktio add lisää uuden luvun ja palauttaa 
+# lisättyjen lukujen moodin.

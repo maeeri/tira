@@ -40,3 +40,11 @@ if __name__ == "__main__":
         "..#..",
         "@@.@."]
     print(count(a)) # 4
+
+
+# Sinun tulee kulkea n×n -ruudukossa vasemmasta yläkulmasta oikeaan alakulmaan niin, 
+# että liikut joka vuorolla askeleen oikealle tai alaspäin. Mikä on pienin määrä vastaan tulevia hirviöitä, jos valitset reitin optimaalisesti?
+
+# Ruudukon kuvauksessa merkki . tarkoittaa lattiaa, merkki # tarkoittaa seinää ja merkki @ tarkoittaa hirviötä. Voit olettaa, että 1≤n≤20. Jos mitään reittiä ei ole olemassa, haluttu vastaus on −1.
+
+# Toteuta tiedostoon monsters.py funktio count, joka antaa pienimmän hirviöiden määrän.

@@ -19,3 +19,11 @@ if __name__ == "__main__":
     print(encrypt("xz")) # yb
     print(encrypt("kkkkkkkk")) # lmnopqrs
     print(encrypt("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")) # bcdefghijklmnopqrstuvwxyzabcde
+
+# Tehtäväsi on salata annettu merkkijono niin, että ensimmäinen merkki liikkuu aakkosissa yhden merkin eteenpäin, toinen merkki kaksi merkkiä eteenpäin, kolmas merkki kolme merkkiä eteenpäin, jne. Jos merkki kasvaa suuremmaksi kuin z, se palaa taas aakkosten alkuun.
+
+# Merkkijono muodostuu merkeistä a–z ja siinä on enintään 100 merkkiä.
+
+# Toteuta tiedostoon encryption.py funktio encrypt, joka tuottaa salatun merkkijonon.
+
+# Selitys: Merkkijonossa xz merkkiä x yhtä suurempi merkki on y. Merkkiä z yhtä suurempi merkki on a, sillä z:n jälkeen siirrytään takaisin aakkosten alkuun. Merkkiä z kahta suurempi merkki on siis b. Siksi merkkijono xz salataan yb.

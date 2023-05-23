@@ -1,3 +1,5 @@
+# ei toimi 
+
 class Shortening:
     def __init__(self,n):
         self.n = n
@@ -67,3 +69,17 @@ if __name__ == "__main__":
     print(s.check(3,5))
     s.add_edge(1,4,7)
     print(s.check(3,4))
+
+
+# Suunnattu painotettu verkko on aluksi tyhjä. Tehtäväsi on toteuttaa luokka, jonka avulla voi lisätä kaaria verkkoon sekä tarkastaa, onko verkossa äärettömän lyhyttä polkua tietystä solmusta toiseen.
+
+# Toisin sanoen tehtävänä on selvittää, onko verkossa kahta solmua a ja b niin, että jos on olemassa mikä tahansa 
+# polku solmusta a solmuun b, voidaan löytää aina toinen polku, joka on vielä lyhempi.
+
+# Voit olettaa, että solmuja on enintään 50, luokan metodeita kutsutaan enintään 100
+# kertaa ja jokaisen kaaren paino on välillä −1000…1000.
+
+# Toteuta tiedostoon shortening.py luokka Shortening, jossa on seuraavat metodit:
+# - konstruktori, jolle annetaan solmujen määrä
+# - add_edge lisää solmusta a solmuun b kaaren, jonka paino on x
+# - check palauttaa True, jos solmusta a solmuun b on äärettömän lyhyt polku, ja muuten False

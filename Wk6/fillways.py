@@ -1,3 +1,4 @@
+# ei toimi vielä
 from math import log2, floor, ceil, factorial
 
 def count(n):
@@ -26,3 +27,11 @@ if __name__ == "__main__":
     # print(count(7)) # 80
     # print(count(10)) # 253440
     # print(count(31)) # 74836825861835980800000
+
+
+# Tehtäväsi on selvittää, monessako eri järjestyksessä luvut 1…n
+# voidaan lisätä tyhjään binäärihakupuuhun siten, että puun korkeudesta tulee mahdollisimman pieni. 
+# Voit olettaa, että puussa on enintään 100 solmua.
+
+# Toteuta tiedostoon fillways.py funktio count, joka kertoo, monessako eri järjestyksessä luvut 1…n
+#  voidaan lisätä binäärihakupuuhun halutulla tavalla.

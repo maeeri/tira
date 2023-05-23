@@ -49,3 +49,15 @@ if __name__ == "__main__":
     a.add_link(4,3)
     a.add_link(4,2)
     print(a.check()) # False
+
+# Bittimaassa on n lentokenttää, joiden välillä ei ole vielä yhteyksiä. Tehtäväsi on toteuttaa luokka, 
+# jonka avulla pystyy lisäämään yksisuuntaisen lentoyhteyden kahden lentokentän välille sekä selvittämään, 
+# onko jokaiselta lentokentältä mahdollista lentää mille tahansa toiselle lentokentälle 
+# (mahdollisesti välilaskujen kautta).
+
+# Voit olettaa, että lentokenttiä on enintään 50 ja luokan metodeita kutsutaan enintään 100 kertaa.
+
+# Toteuta tiedostoon airports.py luokka Airports, jossa on seuraavat metodit:
+# - konstruktori, jolle annetaan lentokenttien määrä
+# - add_link lisää yhteyden lentokentältä a lentokentälle b
+# - check tutkii, voiko jokaiselta lentokentältä saavuttaa kaikki muut lentokentät

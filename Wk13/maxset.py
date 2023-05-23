@@ -34,3 +34,13 @@ if __name__ == "__main__":
     print(m.get_max()) # 3
     m.merge(1,5)
     print(m.get_max()) # 5
+
+# Luvut 1,2,…,n ovat aluksi jokainen omassa joukossaan. Tehtäväsi on toteuttaa luokka, jossa voi yhdistää 
+# kaksi joukkoa sekä hakea suurimman joukon koon.
+
+# Voit olettaa, että n on enintään 105 ja luokan metodeita kutsutaan enintään 105 kertaa.
+
+# Toteuta tiedostoon maxset.py luokka MaxSet, jossa on seuraavat metodit:
+# - konstruktori, jolle annetaan lukujen määrä
+# - merge yhdistää joukot, joissa on luvut a ja b (jos ne ovat eri joukoissa)
+# - get_max ilmoittaa suurimman joukon koon

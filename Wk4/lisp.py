@@ -50,3 +50,12 @@ if __name__ == "__main__":
     print(eval("(* (+ (+ 1 2) 3) (+ (* 4 5) 6 2))")) # 168
     print(eval("(+ 123 456)")) # 579
     print(eval("(+ 7 4 (* 5 8 0 (* 6 1)) (+ 1 9 (* 6 7)))")) # 63
+
+# Lisp-kielessä laskutoimitus annetaan sulkulausekkeena, jossa ensin on laskuoperaattori ja 
+# sen jälkeen yksi tai useampi lauseke. Esimerkiksi lauseke (+ 5 (* 3 2) 7) antaa tuloksen 18.
+
+# Tehtäväsi on toteuttaa koodi, joka laskee Lisp-tyylisen laskulausekkeen arvon. 
+# Voit olettaa, että lausekkeen pituus on enintään 1000 merkkiä, jokainen operaattori 
+# on + tai * ja jokainen laskennan aikana esiintyvä luku on välillä 0…1018.
+
+# Toteuta tiedostoon lisp.py funktio eval, joka antaa lausekkeen arvon.

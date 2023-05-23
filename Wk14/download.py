@@ -59,3 +59,17 @@ if __name__ == "__main__":
     print(d.calculate(1,4)) # 8
 
     #https://www.geeksforgeeks.org/dinics-algorithm-maximum-flow/
+
+# Annettuna on tietoverkko, jossa on n tietokonetta ja niiden välisiä yhteyksiä. Jokaisen yhteyden 
+# kautta voi lähettää tietoa koneesta toiseen tietyn määrän bittejä sekunnissa.
+
+# Tehtäväsi on tutkia, mikä on suurin mahdollinen tiedon määrä, joka voidaan välittää annetusta koneesta 
+# toiseen sekunnissa.
+
+# Voit olettaa, että tietokoneita on enintään 50 ja luokan metodeita kutsutaan enintään 100 kertaa. 
+# Jokaisen yhteyden siirtomäärä on kokonaisluku välillä 1…1000.
+
+# Toteuta tiedostoon download.py luokka Download, jossa on seuraavat metodit:
+# - konstruktori, jolle annetaan tietokoneiden määrä
+# - add_link lisää koneesta a koneeseen b yhteyden, joka siirtää x bittiä sekunnissa
+# - calculate laskee suurimman mahdollisen siirtomäärän koneesta a koneeseen b

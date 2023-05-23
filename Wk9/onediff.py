@@ -24,3 +24,10 @@ if __name__ == "__main__":
     print(find([5,2,3,8,2,4,1])) # 4
     print(find([1,3,5,7,9])) # 1
     print(find([4, 1, 7, 4, 7, 6, 9, 8, 8, 4])) # 4
+
+# Tehtäväsi on etsiä listasta pisin alijono, jossa jokaisen kahden vierekkäisen luvun ero on enintään 1. 
+# Esimerkiksi listassa [5,2,3,8,2,4,1] pisin tällainen alijono on [2,3,2,1], jonka pituus on 4.
+
+# Voit olettaa, että 1≤n≤100 ja jokainen listan alkio on kokonaisluku välillä 1≤n≤100.
+
+# Toteuta tiedostoon onediff.py funktio find, joka antaa pisimmän alijonon pituuden.

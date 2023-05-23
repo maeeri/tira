@@ -1,3 +1,4 @@
+# ei toimi vielä
 from math import log2, floor, ceil
 
 def count(n, k):
@@ -35,3 +36,8 @@ if __name__ == "__main__":
     print(count(10,9)) # 6
     print(count(70,34)) # 68
     print(count(100,8))
+
+# Minimikeko sisältää luvut 1…n. Kuinka monessa eri kohdassa luku k voi sijaita? Voit olettaa, että n
+# on korkeintaan 100 ja että 1≤k≤n.
+
+# Toteuta tiedostoon minheap.py funktio count, joka kertoo kuinka monessa eri kohdassa luku k voi sijaita.

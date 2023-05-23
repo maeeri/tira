@@ -61,3 +61,18 @@ if __name__ == "__main__":
     c.add_course('course1')
     c.add_requisite('course4','course1')
     print(c.find())
+
+# Tehtäväsi on toteuttaa luokka, jossa voi määritellä kursseja ja niiden välisiä esitietovaatimuksia 
+# sekä etsiä tavan suorittaa kurssit vaatimusten mukaisessa järjestyksessä.
+
+# Jos mahdollisia suoritustapoja on useita, mikä tahansa niistä hyväksytään.
+
+# Voit olettaa, että kursseja on enintään 50 ja luokan metodeita kutsutaan enintään 100 kertaa. 
+# Jokaisen kurssin nimi on merkkijono, jossa on enintään 10 merkkiä.
+
+# Toteuta tiedostoon courseplan.py luokka CoursePlan, jossa on seuraavat metodit:
+# - konstruktori
+# - add_course lisää annetun nimisen kurssin
+# - add_requisite lisää esitietovaatimuksen
+# - find etsii jonkin tavan suorittaa kurssit ja palauttaa järjestyksen listana 
+#   (jos mitään tapaa ei ole, metodi palauttaa None)

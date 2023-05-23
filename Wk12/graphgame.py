@@ -68,3 +68,19 @@ if __name__ == "__main__":
     print(g.winning(3)) # True
     print(g.winning(1)) # False
     print(g.winning(2)) # False    
+
+
+# Tarkastellaan kahden pelaajan peliä suunnatussa syklittömässä verkossa. Alussa pelinappula on tietyssä 
+# solmussa, ja pelaajat siirtävät vuorotellen nappulan johonkin solmuun, johon pääsee suoraan kaarella 
+# nykyisestä solmusta. Peli jatkuu, kunnes pelaaja ei voi tehdä mitään siirtoa, jolloin hän häviää pelin 
+# ja toinen pelaaja voittaa.
+
+# Tehtäväsi on toteuttaa luokka, jonka avulla voi lisätä kaaria verkkoon ja selvittää, onko aloittavan 
+# pelaajan mahdollista voittaa peli, jos aloitussolmu on x ja molemmat pelaajat pelaavat optimaalisesti.
+
+# Voit olettaa, että solmuja on enintään 50 ja luokan metodeita kutsutaan enintään 200 kertaa.
+
+# Toteuta tiedostoon graphgame.py luokka GraphGame, jossa on seuraavat metodit:
+# - konstruktori, jolle annetaan solmujen määrä
+# - add_link lisää kaaren solmusta a solmuun b
+# - winning kertoo, voittaako aloittaja pelin solmusta x

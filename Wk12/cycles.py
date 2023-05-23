@@ -54,3 +54,13 @@ if __name__ == "__main__":
     c.add_edge(2,1)
     c.add_edge(5,5)
     c.add_edge(4,5)
+
+# Tehtäväsi on toteuttaa luokka, jonka avulla pystyy lisäämään kaaren suunnattuun verkkoon sekä 
+# tutkimaan, onko verkossa suunnattua sykliä.
+
+# Voit olettaa, että solmuja on enintään 50 ja luokan metodeita kutsutaan enintään 100 kertaa.
+
+# Toteuta tiedostoon cycles.py luokka Cycles, jossa on seuraavat metodit:
+# - konstruktori, jolle annetaan solmujen määrä
+# - add_edge lisää kaaren solmusta a solmuun b
+# - check tarkastaa, onko verkossa suunnattua sykliä

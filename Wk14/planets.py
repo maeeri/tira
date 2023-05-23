@@ -67,3 +67,19 @@ if __name__ == "__main__":
     print(p.calculate()) # 1
     p.add_teleport(1,5)
     print(p.calculate()) # 2
+
+# Pelissä on n planeettaa, jotka on numeroitu 1,2,…,n. Pelaaja aloittaa planeetalta 1 ja voittaa pelin, 
+# kun pääsee planeetalle n.
+
+# Planeettojen välillä voi liikkua teleporteilla. Jokainen teleportti voidaan kuvata parilla (a,b), 
+# missä a<b: teleportti vie planeetalta a planeetalle b.
+
+# Olet päässyt pelin läpi itse, mutta haluat estää, että kukaan voi enää voittaa peliä. Montako 
+# teleporttia sinun tulee poistaa vähintään pelistä?
+
+# Voit olettaa, että n on enintään 50 ja luokan metodeita kutsutaan enintään 100 kertaa.
+
+# Toteuta tiedostoon planets.py luokka Planets, jossa on seuraavat metodit:
+# - konstruktori, jolle annetaan määrä n
+# - add_teleport lisää teleportin planeetalta a planeetalle b
+# - calculate ilmoittaa pienimmän poistettavien teleporttien määrän

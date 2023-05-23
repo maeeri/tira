@@ -33,3 +33,12 @@ if __name__ == "__main__":
     # for i in range(10**5 -2, -1, -1):
     #     m.add(i)
     # print(m.add(10**5-1))
+
+
+# Sinulle annetaan lukuja yksi kerrallaan. Tehtäväsi on kertoa jokaisen luvun kohdalla, 
+# mikä on siihen mennessä annettujen lukujen mex-luku eli pienin puuttuva epänegatiivinen luku.
+
+# Voit olettaa, että jokainen luku on kokonaisluku välillä 0…10**9 ja lukuja annetaan enintään 10**5.
+
+# Toteuta tiedostoon mex.py luokka Mex, jonka funktio add lisää uuden luvun ja palauttaa lisättyjen 
+# lukujen mex-luvun.

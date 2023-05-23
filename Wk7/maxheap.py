@@ -19,3 +19,10 @@ if __name__ == "__main__":
     print(count(10)) # 19
     print(count(123)) # 618
     print(count(999999999)) # 27926258178
+
+# Maksimikekoon lisätään järjestyksessä luvut 1,2,…,n. Kuinka monta kertaa kahden eri alkion 
+# paikkaa vaihdetaan keskenään keossa kyseisen prosessin aikana? Voit olettaa, että n on korkeintaan 10**9.
+
+# Esimerkiksi kun n=4, vaihdot ovat järjestyksessä 1↔2, 2↔3, 1↔4 ja 3↔4, joten vastaus on 4.
+
+# Toteuta tiedostoon maxheap.py fuktio count, joka antaa vaihtojen määrän.

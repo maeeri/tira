@@ -30,3 +30,17 @@ if __name__ == "__main__":
     print(diff(tree)) # 5
     tree = Node(left=None, right=Node(left=Node(left=None, right=None), right=Node(left=None, right=None)))
     print(diff(tree)) # 3
+
+# Tehtäväsi on laskea suurin ero vasemman ja oikean alipuun solmujen määrässä jossain binääripuun solmussa. Voit olettaa, että puussa on enintään 100 solmua.
+
+# Tehtäväpohjassa esimerkkinä on seuraava puu:
+
+# o
+#  \
+#   o
+#  / \
+# o   o
+
+# Tässä puussa suurin ero on juuressa: vasemmalla on 0 solmua ja oikealla on 3 solmua, joten ero on 3.
+
+# Toteuta tiedostoon subtrees.py funktio diff, joka palauttaa suurimman eron.

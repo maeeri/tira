@@ -15,3 +15,11 @@ if __name__ == "__main__":
     print(create(1)) # [A,B,C]
     print(create(2)) # [AB,AC,BA,BC,CA,CB]
     print(len(create(5))) # 48
+
+# Tehtäväsi on muodostaa lista, jossa on kaikki n merkin pituiset merkkijonot, 
+# joissa jokainen merkki on A, B tai C ja missään kohdassa ei ole vierekkäin kahta samaa merkkiä. 
+# Listan tulee olla aakkosjärjestyksessä.
+
+# Voit olettaa, että n on välillä 1…10.
+
+# Toteuta tiedostoon abcdiff.py funktio create, joka muodostaa listan.

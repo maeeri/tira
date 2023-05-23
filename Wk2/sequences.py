@@ -1,3 +1,5 @@
+#ei toimi vielä
+
 def count(s):
     indices = {'t': [], 'i': [], 'r': [], 'a': []}
     counter = 0
@@ -55,3 +57,16 @@ if __name__ == "__main__":
     print(count("ttiirraa")) # 4
     print(count("tixratiyra")) # 11 
     print(count("aotiatraorirratap")) # 42
+
+
+# Tehtäväsi on laskea, moniko annetun merkkijonon osajono sisältää merkkijonon tira alijonona.
+
+# Merkkijono sisältää jonon tira alijonona silloin, kun merkkijonosta voidaan muodostaa merkkijono 
+# tira poistamalla siitä mahdollisesti osa merkeistä muuttamatta merkkien järjestystä. 
+# Esimerkiksi taikurinhattu sisältää sanan tira alijonona, mutta ritari ei sisällä.
+
+# Voit olettaa, että merkkijono muodostuu merkeistä a–z ja siinä on enintään 10**5
+# merkkiä. Tavoitteena on, että algoritmin aikavaativuus on O(n).
+
+# Toteuta tiedostoon sequences.py funktio count, joka palauttaa sellaisten osajonojen määrän, 
+# joilla on tira alijonona.

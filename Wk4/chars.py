@@ -25,3 +25,12 @@ if __name__ == "__main__":
     print(solve("kkkjjiikjkjiikjjiijkjji")) # mjkjmlki
     s = 'a' * 10**5
     print(solve(s))
+
+# Tehtäväsi on muokata annettua merkkijonoa seuraavalla tavalla:
+# Etsi merkkijonosta ensimmäinen kohta, jossa kaksi vierekkäistä merkkiä ovat yhtäsuuria.
+# Jos tällaista kohtaa ei ole, lopeta.
+# Poista nämä kaksi merkkiä merkkijonosta ja korvaa ne yhdellä merkillä, joka on aakkosissa tasan yhtä suurempi kuin poistetut merkit. Kuitenkin jos uusi merkki olisi suurempi kuin z, siitä tulee merkki a.
+# Palaa takaisin kohtaan 1.
+# Merkkijono muodostuu merkeistä a–z ja siinä on enintään 10**5 merkkiä.
+
+# Toteuta tiedostoon chars.py funktio solve, joka palauttaa muokatun merkkijonon.

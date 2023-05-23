@@ -55,3 +55,11 @@ if __name__ == "__main__":
          "#...B#.#",
          "########"]
     print(count(r)) # 7
+
+# Annettuna on n×m -ruudukko, joka esittää labyrinttiä. Tehtäväsi on laskea lyhimmän reitin pituus 
+# ruudusta A ruutuun B. Jokainen ruutu on joko lattiaa (.) tai seinää 
+# (#), ja jokainen reunalla oleva ruutu on seinää.
+
+# Voit olettaa, että 1≤n,m≤20. Jos mitään reittiä ei ole olemassa, palauta −1.
+
+# Toteuta tiedostoon labyrinth.py funktio count, joka kertoo lyhimmän reitin pituuden.

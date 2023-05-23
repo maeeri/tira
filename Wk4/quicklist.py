@@ -26,3 +26,12 @@ if __name__ == "__main__":
     for i in range(10**5 - 1):
         q.move(10**5 - 1)
     print(q.get(10**4))
+
+# Tehtäväsi on toteuttaa oma tehokas lista-tietorakenne, joka tarjoaa seuraavat toiminnot:
+# Poista listalta listan k ensimmäistä alkiota ja siirrä ne samassa järjestyksessä listan loppuun
+# Ilmoita, mikä alkio listalta löytyy indeksiltä i
+
+# Tietorakenteen jokaisen operaation tulee olla O(1)-aikainen. 
+# Voit olettaa, että jokainen alkio on kokonaisluku väliltä 1…10**9.
+
+# Toteuta tiedostoon quicklist.py luokka QuickList seuraavan mallin mukaisesti.
